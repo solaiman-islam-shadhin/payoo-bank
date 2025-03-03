@@ -16,8 +16,7 @@ document.getElementById('add-money-box').style.display='none';
 document.getElementById('add-money').addEventListener('click',function(event){
     
     event.preventDefault();
-    document.getElementById('add-money-box').style.display='block';
-    document.getElementById('cashout-box').style.display='none';
+   
     let mainbalanced=document.getElementById('Balance').innerText;
     let convertedmainbalanced=parseFloat(mainbalanced);
     const actnumber=document.getElementById('add-money-act-number').value;
@@ -67,3 +66,5 @@ document.getElementById('withdraw-money').addEventListener('click',function(even
         alert("invalid account number");
     }
 })
+
+
