@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/payoo.png" type="image/x-icon">
+    <title>Welcome to Payo-Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e2601fc148.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-slate-800 ">
+    <section class=" max-w-md mx-auto  min-h-screen   bg-gray-200">
+        <section class="bg-white rounded-b-[25px]">
+            <nav class="flex justify-between items-center gap-8 px-4 py-5 border-2 ">
+                <div>
+                    <img class="w-full" src="assets/Group.png" alt="">
+
+                </div>
+                <div class=" flex items-center gap-2 border-2 border-[#0874F2] px-8 py-1 rounded-full overflow-clip ">
+                    <p class="text-center ">Balance</p>
+                    <p class="text-2xl text-[#0874F2]">$<span id="Balance">4500</span> </p>
+                </div>
+                <div class="btn btn-outline bg-[#0874F2] text-white">
+                    <i class=" rotate-180 fa-solid fa-arrow-right-from-bracket"></i>
+                    <p id="log-out">logout</p>
+                </div>
+            </nav>
+            <section class="px-5 mt-16  ">
+                <div>
+                    <h1 class="text-3xl font-bold mb-4">🔥Welcome to Payooo!</h1>
+                    <p class="text-[#08080880] font-semibold">Enjoy easy and convenient financial services with us. <br>
+                        Cashout charge is low and </p>
+                </div>
+                <div class="grid md:grid-cols-3 grid-cols-2 gap-5     mt-4  md:gap-2 py-6">
+                    <div id="add-box"
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline hover:bg-[#0874F2] border-[#0874F2] hover:border-white ">
+                        <img src="assets/wallet1.png" alt="">
+                        <p>Add Money</p>
+                    </div>
+                    <div id="cashout-box"
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline hover:bg-[#0874F2] border-[#0874F2] hover:border-white ">
+                        <img src="assets/wallet1.png" alt="">
+                        <p>Cashout</p>
+                    </div>
+                    <div
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline hover:bg-[#0874F2] border-[#0874F2] hover:border-white ">
+                        <img src="assets/wallet1.png" alt="">
+                        <p>Transfer Money</p>
+                    </div>
+                    <div
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline hover:bg-[#0874F2] border-[#0874F2] hover:border-white ">
+                        <img src="assets/bonus1.png" alt="">
+                        <p>Get Bonus</p>
+                    </div>
+                    <div
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline hover:bg-[#0874F2] border-[#0874F2] hover:border-white ">
+                        <img src="assets/wallet1.png" alt="">
+                        <p>Pay Bill</p>
+                    </div>
+                    <div
+                        class="flex flex-col  btn md:w-[133px] h-[100px]  btn-outline  hover:bg-[#0874F2] border-[#0874F2] hover:border-white  ">
+                        <img src="assets/transaction1.png" alt="">
+                        <p>Transactions</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <section>
+
+            <div id="add-money-box" class="hero-content flex-col  ">
+
+                <div class=" card bg-base-100 w-full  shrink-0 shadow-2xl">
+                    <form class="card-body">
+                        <select class="select select-info w-full border-[#0874F2] " required>
+                            <option disabled selected>Select A Bank</option>
+                            <option>Bkash</option>
+                            <option>Nagad</option>
+                            <option>DBBL</option>
+                            <option>Upaye</option>
+                        </select>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Bank Account Number</span>
+                            </label>
+                            <input id="add-money-act-number" type="number" placeholder="Enter 11 digit account number "
+                                class="input input-bordered border-[#0874F2]  " required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount to Add</span>
+                            </label>
+                            <input id="add-amount" type="number" placeholder="Add Amount to withdraw"
+                                class="input input-bordered border-[#0874F2]" required />
+
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="add-money-pin" value="1234" type="text" placeholder="Enter your 4 Digit Pin"
+                                class="input input-bordered border-[#0874F2]" required />
+
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="add-money" class="btn btn-outline rounded-full text-white bg-[#0874F2] ">Add Money
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section>
+
+            <div id="cash-out-box" class="hero-content flex-col  ">
+
+                <div class=" card bg-base-100 w-full  shrink-0 shadow-2xl">
+                    <form class="card-body">
+                       
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Agent Number</span>
+                            </label>
+                            <input id="agent-number" type="number" placeholder="Enter 11 digit account number "
+                                class="input input-bordered border-[#0874F2]  " required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount to Cashout</span>
+                            </label>
+                            <input id="cashout-money" type="number" placeholder="Add Amount to withdraw"
+                                class="input input-bordered border-[#0874F2]" required />
+
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="withdraw-money-pin" value="1234" type="text" placeholder="Enter your 4 Digit Pin"
+                                class="input input-bordered border-[#0874F2]" required />
+
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="withdraw-money" class="btn btn-outline rounded-full text-white bg-[#0874F2] ">Withdraw Money
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
